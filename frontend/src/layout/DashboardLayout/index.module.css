@@ -1,0 +1,106 @@
+.homeContainer {
+  display: flex;
+}
+.homeContainer > div:nth-child(odd) {
+  flex: 0.2;
+}
+.homeContainer > div:nth-child(even) {
+  flex: 0.6;
+}
+.homeContainer__leftBar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  border-right: 1px solid rgb(222, 222, 222);
+  padding-top: 1rem;
+}
+.homeContainer__extraContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  border-left: 1px solid rgb(222, 222, 222);
+  padding-left: 1.2rem;
+  padding-top: 1rem;
+}
+.sideBarOption {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1.3rem;
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sideBarOption:hover {
+  transform: scale(1.04);
+  color: #004182;
+}
+.sideBarOption > svg {
+  height: 1.4em;
+  min-width: fit-content;
+}
+.homeContainer__feedContainer {
+  padding-bottom: 8vh;
+}
+.mobileNavBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 6vh;
+  display: none;
+  justify-content: space-around;
+  background: white;
+  align-items: center;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.mobileNavBar svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+/* Sidebar click effect */
+.sideBarOption svg {
+  width: 24px;
+  height: 24px;
+  color: #555;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.sideBarOption:active svg {
+  color: #3f86ed;
+  transform: scale(0.9);
+}
+
+/* Mobile nav click effect */
+.singleNavItemHolder__mobileView svg {
+  width: 24px;
+  height: 24px;
+  color: #555;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.singleNavItemHolder__mobileView:active svg {
+  color: #3f86ed;
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 600px) {
+  .homeContainer__extraContainer {
+    display: none;
+  }
+  .homeContainer {
+    display: block;
+  }
+  .homeContainer__leftBar {
+    display: none;
+  }
+  .mobileNavBar {
+    display: flex;
+  }
+}

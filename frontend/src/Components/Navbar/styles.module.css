@@ -1,0 +1,107 @@
+.container {
+  padding: 0.8rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  height: 50px;
+}
+
+.navBarOptionContainer {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navBarOptionContainer a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navBarOptionContainer a:hover {
+  color: #3f86ed;
+}
+
+.buttonJoin {
+  width: 140px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonJoin:hover {
+  background-position: right center;
+  transform: scale(1.03);
+}
+.profileContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.profileContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.profileContainer p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.profileContainer p:hover {
+  color: #3f86ed;
+  transform: translateY(-1px);
+}
+
+.profileContainer p::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #3f86ed;
+  transition: width 0.3s ease;
+}
+
+.profileContainer p:hover::after {
+  width: 100%;
+}

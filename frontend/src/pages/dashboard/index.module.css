@@ -1,0 +1,278 @@
+.scrollComponent {
+  display: flex;
+  justify-content: center;
+}
+
+.createPostContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.userProfile {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.textAreaOfContent {
+  flex-grow: 1;
+  height: 44px;
+  border: 1px solid #ced0d4;
+  border-radius: 35px;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f6f9;
+  transition: background-color 0.3s ease;
+  resize: none;
+  overflow: hidden;
+}
+
+.textAreaOfContent:focus {
+  background-color: #ffffff;
+  outline: 2px solid #0a66c2;
+}
+
+.fab {
+  background: #0a66c2;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fab:hover {
+  background: #004182;
+}
+
+.fab > svg {
+  height: 24px;
+  width: 24px;
+  color: white;
+}
+
+.uploadButton {
+  position: absolute;
+  right: 0;
+  bottom: -45%;
+  background-color: rgb(2, 93, 158);
+  color: white;
+  border-radius: 10px;
+  padding-inline: 1.2rem;
+  padding-block: 0.8rem;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+  max-width: 760px;
+  margin-top: 1rem;
+}
+
+.singleCard {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.7rem;
+  /* border-bottom: 1px solid rgb(179, 179, 179); */
+}
+
+.singleCard__profileContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.singleCard__profileContainer > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.singleCard__image {
+  width: 100%;
+  padding-top: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+
+.singleCard__image > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.optionsContainer {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  justify-content: space-between;
+  padding-block: 0.6rem;
+}
+
+.singleOption__optionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.25s ease;
+}
+
+.singleOption__optionsContainer > svg {
+  height: 100%;
+  width: 8%;
+  min-width: 1rem;
+  color: #666;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.singleOption__optionsContainer:hover > svg {
+  color: #0a66c2;
+  transform: scale(1.1);
+}
+
+.singleOption__optionsContainer:hover {
+  background-color: rgba(10, 102, 194, 0.08);
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.allCommentsContainer {
+  width: 40vw;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  padding: 1.4rem;
+}
+
+.postCommentContainer {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.postCommentContainer > input {
+  flex: 0.9;
+  padding-inline: 1.5rem;
+  padding-block: 1.2rem;
+  border: none;
+  background: rgb(228, 228, 228);
+  border-radius: 10px;
+  outline: none;
+}
+
+.postCommentContainer__commentBtn {
+  flex: 0.1;
+  width: fit-content;
+  padding: 1.2rem;
+  background: #156dc5;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.postCommentContainer > input:focus {
+  border: 1px solid silver;
+}
+
+.singleComment {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.singleComment__profileContainer {
+  flex-shrink: 0;
+}
+
+.singleComment__profileContainer > img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.commentContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentName {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.commentUsername {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.2rem 0;
+}
+
+.commentAreaScrollable {
+  max-height: calc(80vh - 100px);
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .allCommentsContainer {
+    width: 90svw;
+    height: 60svh;
+  }
+}

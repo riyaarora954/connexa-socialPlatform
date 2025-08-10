@@ -1,0 +1,131 @@
+.container {
+  font-family: "Poppins";
+  padding: 1.2rem;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 2rem;
+  height: 80vh;
+  flex-wrap: wrap;
+}
+
+.mainContainer__left {
+  flex: 0.7;
+  min-width: 300px;
+}
+
+.mainContainer__right {
+  flex: 0.5;
+  min-width: 300px;
+}
+
+.mainContainer__right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.mainContainer__left > p:nth-child(1) {
+  font-size: 2.9rem;
+  background: linear-gradient(90deg, #1a1a1a, #888, #1a1a1a) -100% / 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font: 900 2.9rem "Exo", sans-serif;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 100%;
+  }
+}
+
+.mainContainer__left > p:nth-child(2) {
+  margin-top: 0.8rem;
+  color: #4d4d4d;
+  font-size: 1.7rem;
+}
+
+.mainContainer__left > div.buttonJoin {
+  width: 160px; /* ⬅️ Reduced from 200px */
+  height: 45px; /* ⬅️ Reduced from 55px */
+  font-size: 1.2rem; /* ⬅️ Reduced from 1.4rem */
+  font-weight: 600;
+  color: #fff;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 40px; /* ⬅️ Slightly reduced from 50px */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 3px 10px rgba(65, 132, 234, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.mainContainer__left > div.buttonJoin:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .mainContainer__left > p:nth-child(1) {
+    font-size: 2.2rem;
+  }
+
+  .mainContainer__left > p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  .mainContainer__left > div.buttonJoin {
+    width: 180px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer__left > p:nth-child(1) {
+    font-size: 1.9rem;
+  }
+
+  .mainContainer__left > p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .mainContainer__left > div.buttonJoin {
+    width: 160px;
+    height: 45px;
+    font-size: 1.1rem;
+    margin-inline: auto;
+  }
+
+  .mainContainer {
+    padding-inline: 1rem;
+  }
+}

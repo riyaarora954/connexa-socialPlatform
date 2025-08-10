@@ -1,0 +1,51 @@
+### Register Fake User
+POST http://localhost:9090/register
+Content-Type: application/json
+
+{
+  "username": "olivia_jones",
+  "password": "Olivia@123",
+  "email": "olivia.jones@example.com",
+  "name": "Olivia Jones"
+}
+
+### Login Fake User
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+  "email": "olivia.jones@example.com",
+  "password": "Olivia@123"
+}
+
+### Get User & Profile (Fake Token Placeholder)
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token": "FAKE_TOKEN_OLIVIA_JONES"
+}
+
+### Update Profile Data for Fake User
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token": "dbc53aff3e932ba49ca903fedc0efe39ae6d8a450817528abed7e475733e6693",
+  "bio": "Project manager with a knack for agile delivery.",
+  "currPost": "Agile Project Manager",
+  "pastWork": [
+    {
+      "company": "SprintWorks",
+      "position": "Scrum Master",
+      "years": "4"
+    }
+  ],
+  "education": [
+    {
+      "school": "Harvard University",
+      "degree": "MBA",
+      "fieldOfStudy": "2016-2018"
+    }
+  ]
+}
